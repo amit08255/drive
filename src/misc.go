@@ -232,7 +232,8 @@ func rootLike(p string) bool {
 func remoteRootLike(p string) bool {
 	switch p {
 	case "My Drive", "Meine Ablage", "Mon Drive", "A miña unidade", "Mi unidad",
-		"माझा ड्राईव्ह", "मेरी डिस्क", "Drive Saya", "Il mio Drive", "Mijn Drive", "我的雲端硬碟":
+		"माझा ड्राईव्ह", "मेरी डिस्क", "Drive Saya", "Il mio Drive", "Mijn Drive",
+		"我的雲端硬碟", "Drive của tôi", "Моят диск":
 		// TODO: Crowd source more language translations here
 		// as per https://github.com/odeke-em/drive/issues/1015
 		return true
@@ -572,6 +573,8 @@ var regExtStrMap = map[string]string{
 	"pptx$":  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
 	"tsv":    "text/tab-separated-values",
 	"xlsx?":  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+
+	"ipynb": "application/vnd.google.colaboratory",
 }
 
 func regMapper(srcMaps ...map[string]string) map[*regexp.Regexp]string {
